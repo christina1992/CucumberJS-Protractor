@@ -1,0 +1,29 @@
+//protractor.conf.js
+exports.config = {
+    //seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
+    directConnect: true,
+    getPageTimeout: 60000,
+    allScriptsTimeout: 500000,
+    framework: 'custom',
+    // path relative to the current config file
+    frameworkPath: require.resolve('protractor-cucumber-framework'),
+    capabilities: {
+        'browserName': 'chrome'
+    },
+
+    // Spec patterns are relative to this directory.
+    specs: [
+        'features/phones2.feature'
+        //'features/singlePhone.feature'
+    ],
+
+    //baseURL: 'http://localhost:8000/',
+
+    cucumberOpts: {
+        require: 'features/step_definitions/phones2_def.js',
+        tags: false,
+        format: 'pretty',
+        profile: false,
+        'no-source': true
+    }
+};
