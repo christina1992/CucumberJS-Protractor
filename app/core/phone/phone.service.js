@@ -10,6 +10,6 @@ angular.
           params: {phoneId: 'phones'},
           isArray: true
         }
-      });
+      })
     }
   ]);
