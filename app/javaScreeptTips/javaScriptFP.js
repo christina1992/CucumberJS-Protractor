@@ -17,21 +17,21 @@ var tasks = [
     }
 ];
 
-/*var task_names = [];
+var task_names = [];
 
- for (var i = 0, max = tasks.length; i < max; i += 1) {
+/* for (var i = 0, max = tasks.length; i < max; i += 1) {
 
  task_names.push(tasks[i].name);
 
  }*/
-
-var task_names = [];
 
 tasks.forEach(function (task) {
 
     task_names.push(task.name);
 
 });
+
+//console.log(task_names);
 
 
 /*var task_names = tasks.map(function (task) {
@@ -41,21 +41,23 @@ tasks.forEach(function (task) {
  });*/
 
 var task_names = tasks.map((task) => task.name + " -js");
+// console.log(task_names);
 
-/*var difficult_tasks = [];
+var difficult_tasks = [];
 
- tasks.forEach(function (task) {
+/* tasks.forEach(function (task) {
  if (task.duration >= 120) {
  difficult_tasks.push(task);
  }
  });*/
-var difficult_tasks = tasks.filter(function (task) {
+
+/*var difficult_tasks = tasks.filter(function (task) {
     return task.duration >= 120;
-});
+});*/
 
 // Using ES6
 var difficult_tasks = tasks.filter((task) => task.duration >= 120);
-console.log(task_names);
+//console.log(task_names);
 
 var numbers = [1, 2, 3, 4, 5],
     total = 0;
@@ -89,7 +91,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
         return response.json();
     })
     .then(function (data) {
-        console.log(data.name);
+        //console.log(data.name);
     })
     .catch(function (error) {
         console.log('Requestfailed', error)
@@ -110,9 +112,9 @@ const ninja1 = {id: idGenerator.next().value};
 const ninja2 = {id: idGenerator.next().value};
 const ninja3 = {id: idGenerator.next().value};
 
-console.log(ninja1.id);
+/*console.log(ninja1.id);
 console.log(ninja2.id);
-console.log(ninja3.id);
+console.log(ninja3.id);*/
 
 // PROMISES + GENERATORS
 function fetchUrl(url) {

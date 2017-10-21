@@ -13,14 +13,14 @@ exports.config = {
 
     // Spec patterns are relative to this directory.
     specs: [
-        'features/phones2.feature'
-        //'features/singlePhone.feature'
+        //'features/phones2.feature'
+        'features/singlePhone.feature'
     ],
 
     //baseURL: 'http://localhost:8000/',
 
     cucumberOpts: {
-        require: 'features/step_definitions/phones2_def.js',
+        require: 'features/step_definitions/singlePhone_defs.js',
         tags: false,
         format: 'pretty',
         profile: false,
